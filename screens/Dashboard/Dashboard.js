@@ -805,7 +805,7 @@ const Dashboard = () => {
       <View style={[styles.toolbar, styles.toolbarFlexBox]}>
         <ImageBackground
           style={styles.arrows1Icon}
-          resizeMode="x"
+          // resizeMode="x"
           source={require("../../assets/images/back.png")}
         />
         <Image

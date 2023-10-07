@@ -35,8 +35,11 @@ const MainNavigator = () => {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
+          title = ""
           options={{
             title: 'Login',
+            headerBackTitle: false
+            // headerLeftLabelVisible: false
           }}
         />
         <Stack.Screen

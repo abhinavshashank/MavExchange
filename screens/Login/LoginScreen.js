@@ -16,8 +16,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 const LoginScreen = ({ navigation }) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('sankalpvk18@gmail.com');
+    const [password, setPassword] = useState('password');
     const [errorMessage, setErrorMessage] = useState('');
     const { currentTheme, toggleTheme } = useContext(ThemeContext);
     const styles = LoginScreenStyles();
@@ -41,16 +41,18 @@ const LoginScreen = ({ navigation }) => {
         //     // setErrorMessage('Email is required!');
         // }
 
-        // try {
-        //     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        //     Alert.alert('Success', `Logged in as ${userCredential.user.email}`);
-        //     // navigation.navigate('Dashboard')
-        // } catch (error) {
-        //     // Alert.alert('Error', error.message);
-        //     Alert.alert('Login Error', 'Incorrect email or password!');
-        // }
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            // Alert.alert('Success', `Logged in as ${userCredential.user.email}`);
 
-        navigation.navigate('Dashboard')
+            navigation.navigate('Dashboard')
+            // toggleTheme();
+        } catch (error) {
+            // Alert.alert('Error', error.message);
+            Alert.alert('Login Error', 'Incorrect email or password!');
+        }
+
+        // navigation.navigate('Dashboard')
     };
 
     const handleForgotPassword = () => {
