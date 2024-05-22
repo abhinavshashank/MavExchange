@@ -1,3 +1,3 @@
 # MavExchange
 
-UTA Hackathon e-commerce project, that simplifies selling andd buying
+UTA Hackathon e-commerce project, that simplifies selling and buying
